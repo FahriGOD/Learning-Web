@@ -77,3 +77,126 @@ Nilai: 85
 Status: Lulus
 
 nilai dengan catatan jika dibawah 70 = Remedial, jika diatas 85 Lulus
+
+1.<?php
+echo "Belajar PHP itu menyenangkan";
+?>
+
+2.<?php
+$nama = "Andi";
+$kelas = "XI PPLG";
+$umur = 17;
+
+echo "Nama: $nama <br>";
+echo "Kelas: $kelas <br>";
+echo "Umur: $umur";
+?>
+
+3.<?php
+$a = 10;
+$b = 5;
+$hasil = $a + $b;
+?>
+
+<!DOCTYPE html>
+<html>
+<body>
+    <h3>Hasil: <?php echo $hasil; ?></h3>
+</body>
+</html>
+
+4.<?php
+$angka = 8;
+
+if ($angka % 2 == 0) {
+    echo "Genap";
+} else {
+    echo "Ganjil";
+}
+?>
+
+5.<?php
+$nilai = 80;
+
+if ($nilai >= 75) {
+    echo "Lulus";
+} else {
+    echo "Tidak Lulus";
+}
+?>
+
+6.<?php
+for ($i = 1; $i <= 10; $i++) {
+    echo $i . " ";
+}
+?>
+
+7.<?php
+$bahasa = ["HTML", "CSS", "JavaScript", "PHP"];
+
+foreach ($bahasa as $b) {
+    echo $b . "<br>";
+}
+?>
+
+8.<?php
+function luas_persegi($sisi) {
+    return $sisi * $sisi;
+}
+
+echo "Luas: " . luas_persegi(4);
+?>
+
+9.<!DOCTYPE html>
+<html>
+<body>
+
+.<form method="POST">
+    Nama: <input type="text" name="nama"><br>
+    Kelas: <input type="text" name="kelas"><br>
+    <button type="submit">Kirim</button>
+</form>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nama = $_POST['nama'];
+    $kelas = $_POST['kelas'];
+
+    echo "Halo $nama, kelas $kelas";
+}
+?>
+
+</body>
+</html>
+
+10.<!DOCTYPE html>
+<html>
+<body>
+
+<form method="POST">
+    Nama: <input type="text" name="nama"><br>
+    Nilai: <input type="number" name="nilai"><br>
+    <button type="submit">Submit</button>
+</form>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nama = $_POST['nama'];
+    $nilai = $_POST['nilai'];
+
+    if ($nilai < 70) {
+        $status = "Remedial";
+    } elseif ($nilai > 85) {
+        $status = "Lulus";
+    } else {
+        $status = "Cukup";
+    }
+
+    echo "Nama: $nama <br>";
+    echo "Nilai: $nilai <br>";
+    echo "Status: $status";
+}
+?>
+
+</body>
+</html>
