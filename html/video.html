@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+
+    <style>
+        /* Mengatur tampilan dasar halaman */
+        body {
+            font-family: Ariak, sans-serif;
+            background-color: #f4f4f4;
+            padding:40px;
+            text-align:center;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-top:40px;
+        }
+
+        video{
+            width:300px;
+            border-radius: 225px;
+            box-shadow: 0 0 10px rgba(0, 0,  0, 0.2);
+            margin-top:10px;
+        }
+
+        inframe{
+            width:400px;
+            height:225px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>HTML Video</h1>
+
+    <h2>Video dengan controls</h2>
+    
+    <video controls>
+        <source src="video.mp4" type ="video/mp4">
+
+        Browser tidak mendukung video.
+    </video>
+
+    <h2>Video Autoplay</h2>
+
+    <video autoplay muted loop>
+        <source src="video.mp4" type="video/mp4">
+        Browser tidak mendukung video.
+    </video>
+
+    <h2>Video dari Youtube (Inframe)</h2>
+
+
+
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+    allowfullscreen>
+
+    </iframe>
+    
+</body>
+</html>
